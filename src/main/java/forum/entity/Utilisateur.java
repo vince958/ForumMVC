@@ -11,7 +11,6 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,6 +18,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.Length;
 
 /**
  *
@@ -36,10 +38,15 @@ public class Utilisateur implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @NotNull(message = "Le login ne peut pas etre vide")
+    @Length(min = 3, max = 10, message = "Login entre 3 et 8 caracteres")
     private String login;
+    
+    @NotNull(message = "Le mot de passe ne peut pas etre vide")
     private String mdp;
     
     @Enumerated(EnumType.STRING)
+    @Valid
     private TypeConnexion type;
     
     @ManyToMany

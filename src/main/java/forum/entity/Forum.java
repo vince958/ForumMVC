@@ -31,14 +31,14 @@ public class Forum implements Serializable {
     private String name;
     
     @ManyToMany(mappedBy = "abonnements")
-    private List<Utilisateur> abonnes = new ArrayList<Utilisateur>();
+    private List<Utilisateur> abonnes = new ArrayList<>();
     
     @ManyToOne
     @JoinColumn(name = "utilisateurId")
     private Utilisateur administrateur;
     
     @OneToMany(mappedBy = "forum")
-    private List<Subject> sujets = new ArrayList<Subject>();
+    private List<Subject> sujets = new ArrayList<>();
 
     public Forum() {
     }

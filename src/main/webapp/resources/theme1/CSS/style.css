@@ -1,0 +1,119 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28 oct. 2015, 14:33:16
+    Author     : ETY
+*/
+html {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-style: italic;
+    color: red;
+}
+
+.menu a, .menu .loginButton{
+    background-color: black;
+    text-decoration: none;
+    font-style: normal;
+    border-radius: 10px;
+    color: white;
+    height: 30px;
+    width: 80%;
+    position: relative;
+    left: 10%;
+    font-size: 1.5em;
+    display: block;
+}
+
+.menu a:hover , .menu .loginButton:hover{
+    background-color: red;
+}
+
+.menu{
+    background-color: rgba(255, 0, 255, 0.3);
+    position: absolute;
+    width: 13%;
+    right: 8%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 30px;
+    min-height: 500px;
+}
+
+.menu .menuLogin {
+    width: 100%;
+    position:absolute;
+    left:0;
+    display: inline-block;
+    bottom: 0;
+    height: 200px;
+    text-align: center;
+    background-color: yellow;
+}
+
+
+.menu .menuLogin .loginButton{
+    border: 0px;
+    cursor: pointer;
+    font-size: 1em;
+    height: 20px;
+}
+
+div{
+    border-radius: 10px;
+    padding: 1%;
+}
+
+.listeForum{
+    text-align: center;
+}
+
+.listeForum table, .listeForum th, .listeForum td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.listeForum table{
+    width: 100%;
+}
+
+.listeForum th, .listeForum td{
+    width: 50%;
+}
+
+.titre{
+    background-color: rgba(255, 0, 0, 0.3);
+    position: relative;
+    width: 80%;
+    height: 200px;
+    left: 10%;
+    text-align: center;
+    font-size: 1.9em;
+}
+
+.contenu{
+    background-color: rgba(0, 255, 0, 0.3);
+    position: relative;
+    display: inline-block;
+    min-height: 500px;
+    width: 64%;
+    left: 10%;
+    margin-top: 30px;
+}
+
+.pied{
+    background-color: rgba(0, 0, 255, 0.3);
+    position: relative;
+    width: 80%;
+    margin-top: 30px;
+    left: 10%;
+    height: 10px;
+    text-align: center;
+    font-size: 0.8em;
+}
